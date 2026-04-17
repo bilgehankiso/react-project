@@ -10,7 +10,7 @@ const CartSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {
-    addToCart: (state, action) => {
+    addItem: (state, action) => {
       const { id, name, price, image, category } = action.payload;
       
       // Check if item already exists in cart
@@ -35,7 +35,7 @@ const CartSlice = createSlice({
       state.totalPrice += price;
     },
 
-    removeFromCart: (state, action) => {
+    removeItem: (state, action) => {
       const { id } = action.payload;
       const itemIndex = state.items.findIndex(item => item.id === id);
       
@@ -99,8 +99,8 @@ const CartSlice = createSlice({
 });
 
 export const {
-  addToCart,
-  removeFromCart,
+  addItem,
+  removeItem,
   updateQuantity,
   incrementQuantity,
   decrementQuantity,

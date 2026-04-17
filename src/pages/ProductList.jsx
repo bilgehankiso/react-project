@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart } from '../redux/CartSlice';
+import { addItem } from '../redux/CartSlice';
 import Navbar from '../components/Navbar';
 
 const ProductList = () => {
@@ -60,7 +60,7 @@ const ProductList = () => {
   };
 
   const handleAddToCart = (product) => {
-    dispatch(addToCart(product));
+    dispatch(addItem(product));
     setAddedItems(new Set([...addedItems, product.id]));
   };
 

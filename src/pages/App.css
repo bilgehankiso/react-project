@@ -32,6 +32,13 @@ body {
   overflow: hidden;
 }
 
+/* Background Image Class */
+.background-image {
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="plants" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse"><g fill="%23228B22" opacity="0.1"><path d="M100 50 Q80 100 100 150 Q120 100 100 50"/><circle cx="70" cy="80" r="15" opacity="0.3"/><circle cx="130" cy="100" r="20" opacity="0.3"/></g></pattern></defs><rect width="1200" height="600" fill="%23228B22"/><rect width="1200" height="600" fill="url(%23plants)"/></svg>');
+  background-size: cover;
+  background-position: center;
+}
+
 .landing-page::before {
   content: '';
   position: absolute;
